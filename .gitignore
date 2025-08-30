@@ -47,3 +47,9 @@ app.*.map.json
 
 # Archivos adicionales que no se desean subir
 *.env
+android/
+windows/
+ios/
+linux/
+macos/
+web/
