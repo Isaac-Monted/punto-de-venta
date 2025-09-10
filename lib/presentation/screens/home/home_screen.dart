@@ -19,11 +19,17 @@ class HomeScreen extends StatelessWidget {
 class _HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        children: [
-          Text('Pestaña de inicio')
-        ],
+    return SafeArea(
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            spacing: 8.0,
+            children: [
+              Text('Pestaña de Inicio')
+            ],
+          ),
+        ),
       ),
     );
   }

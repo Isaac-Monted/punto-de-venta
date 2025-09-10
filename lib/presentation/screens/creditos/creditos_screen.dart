@@ -18,10 +18,48 @@ class CreditosScreen extends StatelessWidget{
 class _CreditosView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
+    return SafeArea(
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            spacing: 8.0,
+            children: [
+              _MenuContextual(),
+              Text('Pestaña de Creditos')
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _MenuContextual extends  StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Align(
+      alignment: Alignment.topLeft,
+      child: Wrap(
+        spacing: 8.0,
+        runSpacing: 5.0,
+        alignment: WrapAlignment.start,
+        runAlignment: WrapAlignment.start,
         children: [
-          Text('Pestaña de creditos')
+          ElevatedButton.icon(
+            icon: Icon(Icons.balance),
+            label: Text('Estados de Cuenta'),
+            onPressed: () {
+              
+            }
+          ),
+          ElevatedButton.icon(
+            icon: Icon(Icons.account_box),
+            label: Text('Reporte de saldos'),
+            onPressed: () {
+              
+            }
+          ),
         ],
       ),
     );

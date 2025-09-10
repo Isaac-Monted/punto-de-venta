@@ -18,10 +18,69 @@ class ComprasScreen extends StatelessWidget {
 class _ComprasView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
+    return SafeArea(
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            spacing: 8.0,
+            children: [
+              _MenuContextual(),
+              Text('Pestaña de Compras')
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _MenuContextual extends  StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Align(
+      alignment: Alignment.topLeft,
+      child: Wrap(
+        spacing: 8.0,
+        runSpacing: 5.0,
+        alignment: WrapAlignment.start,
+        runAlignment: WrapAlignment.start,
         children: [
-          Text('Pestaña de compras')
+          ElevatedButton.icon(
+            icon: Icon(Icons.ballot),
+            label: Text('Compras sugeridas'),
+            onPressed: () {
+              
+            }
+          ),
+          ElevatedButton.icon(
+            icon: Icon(Icons.assignment),
+            label: Text('Lista de compras'),
+            onPressed: () {
+              
+            }
+          ),
+          ElevatedButton.icon(
+            icon: Icon(Icons.content_paste),
+            label: Text('Ordenes de compra'),
+            onPressed: () {
+              
+            }
+          ),
+          ElevatedButton.icon(
+            icon: Icon(Icons.local_shipping),
+            label: Text('proveedores'),
+            onPressed: () {
+              
+            }
+          ),
+          ElevatedButton.icon(
+            icon: Icon(Icons.work_history),
+            label: Text('Historico de compras'),
+            onPressed: () {
+              
+            }
+          ),
         ],
       ),
     );

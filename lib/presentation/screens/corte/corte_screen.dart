@@ -18,10 +18,48 @@ class CorteScreen extends StatelessWidget {
 class _CorteView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
+    return SafeArea(
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            spacing: 8.0,
+            children: [
+              _MenuContextual(),
+              Text('Pestaña de Cortes')
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _MenuContextual extends  StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Align(
+      alignment: Alignment.topLeft,
+      child: Wrap(
+        spacing: 8.0,
+        runSpacing: 5.0,
+        alignment: WrapAlignment.start,
+        runAlignment: WrapAlignment.start,
         children: [
-          Text('Pestaña de cortes')
+          ElevatedButton.icon(
+            icon: Icon(Icons.cut),
+            label: Text('Corte de cajero'),
+            onPressed: () {
+              
+            }
+          ),
+          ElevatedButton.icon(
+            icon: Icon(Icons.cut_outlined),
+            label: Text('Corte del dia'),
+            onPressed: () {
+              
+            }
+          ),
         ],
       ),
     );

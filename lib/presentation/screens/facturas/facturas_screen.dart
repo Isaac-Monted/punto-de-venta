@@ -18,10 +18,55 @@ class FacturasScreen extends StatelessWidget{
 class _FacturasView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
+    return SafeArea(
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            spacing: 8.0,
+            children: [
+              _MenuContextual(),
+              Text('Pestaña de Facturas')
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _MenuContextual extends  StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Align(
+      alignment: Alignment.topLeft,
+      child: Wrap(
+        spacing: 8.0,
+        runSpacing: 5.0,
+        alignment: WrapAlignment.start,
+        runAlignment: WrapAlignment.start,
         children: [
-          Text('Pestaña de Facturas')
+          ElevatedButton.icon(
+            icon: Icon(Icons.ballot),
+            label: Text('Facturas por ventas'),
+            onPressed: () {
+              
+            }
+          ),
+          ElevatedButton.icon(
+            icon: Icon(Icons.library_books),
+            label: Text('facturas globales'),
+            onPressed: () {
+              
+            }
+          ),
+          ElevatedButton.icon(
+            icon: Icon(Icons.people),
+            label: Text('Clientes de facturacion'),
+            onPressed: () {
+              
+            }
+          ),
         ],
       ),
     );
